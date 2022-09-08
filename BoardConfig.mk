@@ -53,6 +53,9 @@ TARGET_KERNEL_USE_DEFAULT_CLANG := true
 BOARD_MKBOOTIMG_ARGS += --header_version $(BOARD_BOOTIMG_HEADER_VERSION)
 TARGET_KERNEL_ADDITIONAL_FLAGS := DTC_EXT=$(shell pwd)/prebuilts/misc/$(HOST_OS)-x86/dtc/dtc
 
+TARGET_PREBUILT_DTB := $(DEVICE_PATH)/prebuilt/dt.img
+BOARD_PREBUILT_DTBOIMAGE := $(DEVICE_PATH)/prebuilt/dtbo.img
+
 # Platform
 TARGET_BOARD_PLATFORM := bengal
 
