@@ -4,7 +4,7 @@
 # SPDX-License-Identifier: Apache-2.0
 #
 
-DEVICE_PATH := device/xiaomi/chime
+DEVICE_PATH := device/xiaomi/cebu
 
 # Architecture
 TARGET_ARCH := arm64
@@ -20,7 +20,7 @@ TARGET_2ND_CPU_ABI2 := armeabi
 TARGET_2ND_CPU_VARIANT := cortex-a73
 
 # Assert
-TARGET_OTA_ASSERT_DEVICE := citrus,lime,lemon,pomelo,chime,juice
+TARGET_OTA_ASSERT_DEVICE := citrus,lime,lemon,pomelo,cebu,juice
 
 # Build
 BUILD_BROKEN_DUP_RULES := true
@@ -58,8 +58,8 @@ BOARD_BOOTIMG_HEADER_VERSION := 2
 BOARD_KERNEL_IMAGE_NAME := Image.gz
 BOARD_KERNEL_SEPARATED_DTBO := true
 TARGET_KERNEL_ARCH := arm64
-TARGET_KERNEL_SOURCE := kernel/xiaomi/chime
-TARGET_KERNEL_CONFIG := vendor/chime_defconfig
+TARGET_KERNEL_SOURCE := kernel/xiaomi/cebu
+TARGET_KERNEL_CONFIG := vendor/cebu_defconfig
 TARGET_KERNEL_CLANG_COMPILE := true
 TARGET_KERNEL_USE_DEFAULT_CLANG := true
 BOARD_MKBOOTIMG_ARGS += --header_version $(BOARD_BOOTIMG_HEADER_VERSION)
@@ -101,8 +101,8 @@ DEVICE_MANIFEST_FILE += $(DEVICE_PATH)/manifest.xml
 DEVICE_MATRIX_FILE := $(DEVICE_PATH)/compatibility_matrix.xml
 
 # Init
-TARGET_INIT_VENDOR_LIB := //$(DEVICE_PATH):init_chime
-TARGET_RECOVERY_DEVICE_MODULES := libinit_chime
+TARGET_INIT_VENDOR_LIB := //$(DEVICE_PATH):init_cebu
+TARGET_RECOVERY_DEVICE_MODULES := libinit_cebu
 
 # Media
 TARGET_USES_ION := true
@@ -211,4 +211,4 @@ WIFI_HIDL_UNIFIED_SUPPLICANT_SERVICE_RC_ENTRY := true
 WPA_SUPPLICANT_VERSION := VER_0_8_X
 
 # Inherit from the proprietary version
-include vendor/xiaomi/chime/BoardConfigVendor.mk
+include vendor/xiaomi/cebu/BoardConfigVendor.mk

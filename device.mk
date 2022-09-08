@@ -14,7 +14,7 @@ $(call inherit-product, $(SRC_TARGET_DIR)/product/gsi_keys.mk)
 $(call inherit-product, frameworks/native/build/phone-xhdpi-6144-dalvik-heap.mk)
 
 # Get non-open-source specific aspects
-$(call inherit-product, vendor/xiaomi/chime/chime-vendor.mk)
+$(call inherit-product, vendor/xiaomi/cebu/cebu-vendor.mk)
 
 # Inherit several Android Go Configurations(Beneficial for everyone, even on non-Go devices)
 PRODUCT_USE_PROFILE_FOR_BOOT_IMAGE := true
@@ -217,7 +217,7 @@ PRODUCT_COPY_FILES += \
 
 # Lights
 PRODUCT_PACKAGES += \
-    android.hardware.lights-service.chime
+    android.hardware.lights-service.cebu
 
 PRODUCT_PACKAGES += \
     lights.bengal
@@ -484,7 +484,7 @@ PRODUCT_PACKAGES += \
 
 # Vibrator
 PRODUCT_PACKAGES += \
-    vendor.qti.hardware.vibrator.service.chime \
+    vendor.qti.hardware.vibrator.service.cebu \
     vendor.qti.hardware.vibrator-impl
 
 PRODUCT_COPY_FILES += \
