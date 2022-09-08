@@ -17,8 +17,15 @@ $(call inherit-product, vendor/lineage/config/common_full_phone.mk)
 # Device identifier. This must come after all inclusions.
 PRODUCT_NAME := lineage_cebu
 PRODUCT_DEVICE := cebu
-PRODUCT_BRAND := Xiaomi
-PRODUCT_MODEL := Redmi 9T
+PRODUCT_BRAND := motorola
+PRODUCT_MODEL := moto g(9) power
 PRODUCT_MANUFACTURER := Xiaomi
 
-PRODUCT_GMS_CLIENTID_BASE := android-xiaomi
+PRODUCT_GMS_CLIENTID_BASE := android-motorola
+
+TARGET_VENDOR := motorola
+TARGET_VENDOR_PRODUCT_NAME := cebu
+PRODUCT_BUILD_PROP_OVERRIDES += PRIVATE_BUILD_DESC="cebu_retail-user 11 RZCS31.Q2-57-12-1 6e2bd release-keys"
+
+# Set BUILD_FINGERPRINT variable to be picked up by both system and vendor build.prop
+BUILD_FINGERPRINT := motorola/cebu_retail/cebu:11/RZCS31.Q2-57-12-1/6e2bd:user/release-keys
